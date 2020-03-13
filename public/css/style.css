@@ -56,7 +56,7 @@ h2 {
   font-size: 4.8vw;
   color: #3a4e55;
   text-align: center;
-  margin: 0 0 10vw 0;
+  margin: 0 0 6vw 0;
   padding: 0;
 }
 
@@ -237,16 +237,21 @@ button {
   display: block;
 }
 
-section#detail {}
+section#detail {
+  display: flex;
+  overflow-x: scroll;
+}
 
 #detail article {
   background-color: #a0cad4cc;
   padding: 1em 1em 2em 1em;
-  margin: 1em 0;
+  margin: 0 1em 0 0;
+  width: 18em;
 }
 
 #detail article p {
   margin: .5em 0;
+  min-width: 15em;
 }
 
 @media screen and (min-width: 30em) {
@@ -267,6 +272,10 @@ section#detail {}
   }
   button {
     font-size: .8em;
+  }
+  header {
+    width: 80%;
+    margin: 0 auto;
   }
   #results canvas {
     width: 8vw;
@@ -299,6 +308,9 @@ section#detail {}
     width: 8vw;
   }
   main {
+    width: 70%
+  }
+  header {
     width: 70%
   }
 }

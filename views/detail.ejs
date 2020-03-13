@@ -1,160 +1,163 @@
 <%- include('partials/head.ejs') %>
 
+  <header>
+    <h1>
+      <%= name %>
+    </h1>
+    <h2>Weather forecast</h2>
+    <a href="/"><button>Back to results</button></a>
+  </header>
+  <main>
+    <section id="detail">
 
-  <h1>
-    <%= name %>
-  </h1>
-  <h2>Weather forecast</h2>
-  <a href="/"><button>Back to results</button></a>
-  <section id="detail">
-    <article>
-      <h4> Date:
-        <%= weatherDailyData[0].timestamp %>
-      </h4>
-
-
-      <p>
-        Weather:
-        <%= weatherDailyData[0].summary %>
-      </p>
-      <p>
-        Temperature:
-        <%= weatherDailyData[0].temperatureLow %>
-          ˚C
-      </p>
-      <p>
-        Precip type:
-        <%= weatherDailyData[0].precipType %>
-      </p>
-      <p>
-        Precip intensity:
-        <%= weatherDailyData[0].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[1].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[1].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[1].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[1].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[1].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[2].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[2].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[2].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[2].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[2].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[3].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[3].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[3].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[3].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[3].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[4].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[4].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[4].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[4].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[4].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[5].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[5].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[5].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[5].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[5].precipIntensity %>
-          cm.
-      </p>
-    </article>
-
-    <article>
-      <h4>Date:
-        <%= weatherDailyData[6].timestamp %>
-      </h4>
-      <p> Weather:
-        <%= weatherDailyData[6].summary %>
-      </p>
-      <p>Temperature:
-        <%= weatherDailyData[6].temperatureLow %>
-          ˚C
-      </p>
-      <p>Precip type:
-        <%= weatherDailyData[6].precipType %>
-      </p>
-      <p>Precip intensity:
-        <%= weatherDailyData[6].precipIntensity %>
-          cm.
-      </p>
+      <article>
+        <h4> Date:
+          <%= weatherDailyData[0].timestamp %>
+        </h4>
 
 
+        <p>
+          Weather:
+          <%= weatherDailyData[0].summary %>
+        </p>
+        <p>
+          Temperature:
+          <%= weatherDailyData[0].temperatureLow %>
+            ˚C
+        </p>
+        <p>
+          Precip type:
+          <%= weatherDailyData[0].precipType %>
+        </p>
+        <p>
+          Precip intensity:
+          <%= weatherDailyData[0].precipIntensity %>
+            cm.
+        </p>
+      </article>
 
-    </article>
-  </section>
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[1].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[1].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[1].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[1].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[1].precipIntensity %>
+            cm.
+        </p>
+      </article>
 
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[2].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[2].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[2].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[2].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[2].precipIntensity %>
+            cm.
+        </p>
+      </article>
+
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[3].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[3].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[3].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[3].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[3].precipIntensity %>
+            cm.
+        </p>
+      </article>
+
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[4].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[4].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[4].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[4].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[4].precipIntensity %>
+            cm.
+        </p>
+      </article>
+
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[5].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[5].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[5].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[5].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[5].precipIntensity %>
+            cm.
+        </p>
+      </article>
+
+      <article>
+        <h4>Date:
+          <%= weatherDailyData[6].timestamp %>
+        </h4>
+        <p> Weather:
+          <%= weatherDailyData[6].summary %>
+        </p>
+        <p>Temperature:
+          <%= weatherDailyData[6].temperatureLow %>
+            ˚C
+        </p>
+        <p>Precip type:
+          <%= weatherDailyData[6].precipType %>
+        </p>
+        <p>Precip intensity:
+          <%= weatherDailyData[6].precipIntensity %>
+            cm.
+        </p>
+
+
+
+      </article>
+    </section>
+  </main>
   <%- include('partials/footer.ejs') %>

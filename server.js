@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
+const PORT = process.env.PORT || 5000
 const fetch = require('node-fetch');
 const dataHelper = require('./modules/data-helper')
 const weatherApi = require('./modules/weatherApi')
@@ -44,4 +45,4 @@ app.get('/detail/:name/:lat/:lon', (req, res) => {
     })
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
