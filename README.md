@@ -36,7 +36,7 @@ Git clone https://github.com/marissaverdonck/progressive-web-apps-1920.git
 ```
 4. Run the application. Typ in your terminal:
 ```
-server.js
+node server.js
 ```
 
 
