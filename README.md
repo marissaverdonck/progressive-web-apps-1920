@@ -30,17 +30,11 @@ Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-we
 
 2. Go to the file in your computer where you want to install the application
 
-3. Clone the repository
-
-Typ in your terminal:
-
+3. Clone the repository. Typ in your terminal:
 ```
 Git clone https://github.com/marissaverdonck/progressive-web-apps-1920.git
 ```
-4. Run the application
-
-Typ in your terminal:
-
+4. Run the application. Typ in your terminal:
 ```
 server.js
 ```
