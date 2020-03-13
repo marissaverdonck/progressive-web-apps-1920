@@ -43,7 +43,7 @@ main {
 
 h1 {
   font-family: DinCondensed, serif;
-  font-size: 13vw;
+  font-size: 16vw;
   text-transform: uppercase;
   text-align: center;
   margin: 5vw 0 0 0;
@@ -53,7 +53,7 @@ h1 {
 
 h2 {
   font-family: Ailerons, sans-serif;
-  font-size: 3.9vw;
+  font-size: 4.8vw;
   color: #3a4e55;
   text-align: center;
   margin: 0 0 10vw 0;
@@ -69,7 +69,7 @@ h3 {
 
 h4 {
   font-family: DinCondensed, serif;
-  font-size: 1.5em;
+  font-size: 7vw;
   color: #ffffff;
 }
 
@@ -83,7 +83,7 @@ h5 {
 p {
   font-family: Avenir, sans-serif;
   color: #3a4e55;
-  font-size: 1.1em;
+  font-size: 4vw;
   font-weight: 600;
 }
 
@@ -247,6 +247,33 @@ section#detail {}
 
 #detail article p {
   margin: .5em 0;
+}
+
+@media screen and (min-width: 30em) {
+  h1 {
+    font-size: 12vw;
+  }
+  h2 {
+    font-size: 4vw;
+  }
+  h3 {
+    font-size: 4.5vw;
+  }
+  h4 {
+    font-size: 2em;
+  }
+  p {
+    font-size: 1em;
+  }
+  button {
+    font-size: 1vw;
+  }
+  #results canvas {
+    width: 8vw;
+  }
+  main {
+    width: 80%
+  }
 }
 
 @media screen and (min-width: 60em) {
