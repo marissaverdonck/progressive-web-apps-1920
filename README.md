@@ -1,6 +1,6 @@
 # Snow Hunters - Progressive Web App
 
-<img width="642" alt="Schermafbeelding 2020-02-28 om 08 16 49" src="https://user-images.githubusercontent.com/43657951/75520196-41976a80-5a05-11ea-9663-a9fbef1fefb6.png">
+<img width="742" alt="Schermafbeelding 2020-03-13 om 15 10 46" src="https://user-images.githubusercontent.com/43657951/76628366-e30dd880-653c-11ea-9fe7-101b5df99a66.png">
 
 ## Table of Contents
 * [Concept](#Concept)
