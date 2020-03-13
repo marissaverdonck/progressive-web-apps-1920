@@ -16,7 +16,7 @@
 * [License](#License)
 
 ## Concept
-This is a weather forecast application for skilocations. I converted this (client side web application)[https://github.com/marissaverdonck/web-app-from-scratch-1920] into a server side rendered application. I'll add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately I'm going to implement a series of optimisations to improve the performance of the application.  
+This is a weather forecast application for skilocations. I converted this [client side web application](https://github.com/marissaverdonck/web-app-from-scratch-1920) into a server side rendered application. I'll add functionalities based on the Service Worker and turn the application into a Progressive Web App. Ultimately I'm going to implement a series of optimisations to improve the performance of the application.  
 
 
 ## Live Demo
