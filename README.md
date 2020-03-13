@@ -132,7 +132,6 @@ Website: https://skimap.org/pages/Developers#skiArea
 ## Features
 * Retrieving data from 2 API's
 * Server side rendering
-* Routing
 * Modules
 
 ## WishList
