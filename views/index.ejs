@@ -1,7 +1,49 @@
 <%- include('partials/head.ejs') %>
+  <header>
+    <h1>Snow hunters</h1>
+    <h2>Skilocation Weather Forecast</h2>
+  </header>
+  <main>
+    <section id="results">
+      <ul id="listSkiAreas">
+        <% weatherData.reduce(function(acc, cur, ind) { %>
+          <li>
+            <a href="/detail/<%=skiLocations.skiLocations[ind].name.__cdata %>/<%=skiLocations.skiLocations[ind].georeferencing._lat%>/<%=skiLocations.skiLocations[ind].georeferencing._lng%> ">
+              <article>
+                <h4>
+                  <%=skiLocations.skiLocations[ind].name.__cdata%>,
+                    <%=skiLocations.skiLocations[ind].regions.region.__cdata%>
+                </h4>
+                <div>
+                  <p>
+                    Summary:
+                    <%=weatherData[ind].currently.summary%>
+                  </p>
+                  <p>
+                    Temperature:
+                    <%=weatherData[ind].currently.temperature%>
+                      ˚C
+                  </p>
+                  <p>
+                    Precip type:
+                    <%=weatherData[ind].currently.precipType%>
+                  </p>
+                  <p>
+                    Precip accumulation:
+                    <%=weatherData[ind].currently.precipAccumulation%>
+                      cm.
+                  </p>
 
 
-  <h1>Index</h1>
 
+                </div>
+                <div></div>
+                <div></div>
+              </article>
+            </a>
+          </li>
+          <% }, 0) %>
+      </ul>
+  </main>
 
   <%- include('partials/footer.ejs') %>

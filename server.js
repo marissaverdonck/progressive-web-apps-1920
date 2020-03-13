@@ -2,30 +2,46 @@ const express = require('express')
 const app = express()
 const port = 3000
 const fetch = require('node-fetch');
-const obaData = require('./modules/obaapi')
-const weatherData = require('./modules/weatherApi')
-app.use(express.static('public'));
+const dataHelper = require('./modules/data-helper')
+const weatherApi = require('./modules/weatherApi')
+const skiLocations = require('./modules/skiLocationApi')
 
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 
-
-
-
 app.get('/', (req, res) => {
-  weatherData.getWeather()
-    .then(function(data) {
-      console.log(data)
+  dataHelper.getWeatherSkiLocations(skiLocations)
+    .then((weatherData) => {
+      console.log(skiLocations.skiLocations[0].georeferencing._lat)
+      res.render('index', {
+        weatherData,
+        skiLocations
+      })
     })
-  res.render('index')
-
-})
-
-app.get('/results', (req, res) => {
-  res.render('results')
 })
 
 
+app.get('/detail/:name/:lat/:lon', (req, res) => {
+  // Params:Amsterdam test
+  // http://localhost:3000/detail/52.379189/4.899431
+  const name = req.params.name
+  const lat = req.params.lat
+  const lon = req.params.lon
+  weatherApi.getWeather(lat, lon)
+    .then((weatherData) => {
+      const weatherDailyData = dataHelper.weatherConvertTime(weatherData)
+      return ([weatherDailyData, weatherData])
+    })
+    .then(([weatherDailyData, weatherData]) => {
+      res.render('detail', {
+        weatherDailyData,
+        weatherData,
+        name
+
+      })
+    })
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
