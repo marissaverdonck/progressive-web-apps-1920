@@ -133,6 +133,7 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Retrieving data from 2 API's
 * Server side rendering
 * Modules
+* Deployment
 
 ## WishList
 
