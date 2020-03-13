@@ -266,7 +266,7 @@ section#detail {}
     font-size: 1em;
   }
   button {
-    font-size: 1vw;
+    font-size: .8em;
   }
   #results canvas {
     width: 8vw;
