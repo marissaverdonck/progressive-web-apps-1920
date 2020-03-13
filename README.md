@@ -1,6 +1,5 @@
 # Progressive Web Apps @cmda-minor-web · 2019-2020
 
-## Snow hunters
 <img width="642" alt="Schermafbeelding 2020-02-28 om 08 16 49" src="https://user-images.githubusercontent.com/43657951/75520196-41976a80-5a05-11ea-9663-a9fbef1fefb6.png">
 
 ## Table of Contents
