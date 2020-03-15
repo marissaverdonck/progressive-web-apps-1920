@@ -20,7 +20,7 @@ This is a weather forecast application for skilocations. I converted this [clien
 
 
 ## Live Demo
-https://marissaverdonck.github.io/progressive-web-apps-1920/
+https://tranquil-dawn-22628.herokuapp.com/
 
 ## Research
 Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki)
