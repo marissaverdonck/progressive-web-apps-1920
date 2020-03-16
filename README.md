@@ -1,6 +1,6 @@
-# Progressive Web Apps @cmda-minor-web · 2019-2020
+# Snow Hunters - Progressive Web App
 
-<img width="642" alt="Schermafbeelding 2020-02-28 om 08 16 49" src="https://user-images.githubusercontent.com/43657951/75520196-41976a80-5a05-11ea-9663-a9fbef1fefb6.png">
+<img width="742" alt="Schermafbeelding 2020-03-13 om 15 10 46" src="https://user-images.githubusercontent.com/43657951/76628366-e30dd880-653c-11ea-9fe7-101b5df99a66.png">
 
 ## Table of Contents
 * [Concept](#Concept)
@@ -20,7 +20,7 @@ This is a weather forecast application for skilocations. I converted this [clien
 
 
 ## Live Demo
-https://marissaverdonck.github.io/progressive-web-apps-1920/
+https://tranquil-dawn-22628.herokuapp.com/
 
 ## Research
 Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki)
@@ -36,7 +36,7 @@ Git clone https://github.com/marissaverdonck/progressive-web-apps-1920.git
 ```
 4. Run the application. Typ in your terminal:
 ```
-server.js
+node server.js
 ```
 
 
@@ -133,6 +133,7 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Retrieving data from 2 API's
 * Server side rendering
 * Modules
+* Deployment
 
 ## WishList
 
