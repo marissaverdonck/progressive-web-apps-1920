@@ -34,7 +34,7 @@ Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-we
 ```
 Git clone https://github.com/marissaverdonck/progressive-web-apps-1920.git
 ```
-4. Install dependencies
+4. Install dev dependencies
 
 ```
 npm install --save-dev gulp
