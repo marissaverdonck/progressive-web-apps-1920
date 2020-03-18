@@ -8,6 +8,7 @@ const weatherApi = require('./modules/weatherApi')
 const skiLocations = require('./modules/skiLocationApi')
 
 app.use(express.static('public'));
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
