@@ -4,11 +4,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
 return gulp.src([
-    './public/css/style.css',
+    './public/css/fonts/*.*'
   ])
-  .pipe(concat('style.css'))
-  .pipe(cleanCSS())
-  .pipe(autoprefixer({
-    cascade: false
-  }))
-  .pipe(gulp.dest('./static/'))
+  .pipe(gulp.dest('./static/fonts/'))

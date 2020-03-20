@@ -55,7 +55,6 @@ self.addEventListener('fetch', event => {
   // }
 
 
-
 });
 
 
