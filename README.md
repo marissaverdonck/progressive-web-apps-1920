@@ -41,29 +41,18 @@ Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-we
 ```
 Git clone https://github.com/marissaverdonck/progressive-web-apps-1920.git
 ```
-4. Install dev dependencies
+4. Install dependencies
 
 ```
-npm install --save-dev gulp
+npm install
 ```
 
-```
-npm install --save-dev gulp-autoprefixer
-```
-
-```
-npm install --save-dev gulp-clean-css
-```
-
-```
-npm install --save-dev gulp-concat
-```
-
-
-5. Run the application. Typ in your terminal:
+5. Start the app
 ```
 node server.js
 ```
+
+
 
 
 ## API's 
