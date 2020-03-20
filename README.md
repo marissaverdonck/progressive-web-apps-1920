@@ -1,3 +1,10 @@
+### 3 Vragen/ dingen waar je op moet letten/ waar ik tegen aan loop/ waar ik trots op ben:
+* Trots: De site werkt offline. Er is een manifest en service worker. Je kan de app instaleren.
+* Waar ik tegen aan loop: Ik wil nu de user feedback geven als hij/zij offline is. Ik kijk de presentatie van Declan van afgelopen dinsdag terug.
+* Waar ik tegen aan loop: Builden. Ik ben in de voorbeeld code van Declan aan het kijken hoe hij dat heeft aangepakt.
+
+________________
+
 # Snow Hunters - Progressive Web App
 
 <img width="742" alt="Schermafbeelding 2020-03-13 om 15 10 46" src="https://user-images.githubusercontent.com/43657951/76628366-e30dd880-653c-11ea-9fe7-101b5df99a66.png">
