@@ -2,7 +2,7 @@
   "name": "progressive-web-apps-1920",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "server.js",
   "scripts": {
     "prestart": "npm run build",
     "start": "node server.js",
