@@ -3,18 +3,18 @@ body {
 }
 
 @font-face {
-  font-family: DinCondensed;
-  src: url('DINCondensed-Bold.ttf')
+  font-family: Roboto;
+  src: url('/static/fonts/Roboto-Black.ttf')
 }
 
 @font-face {
   font-family: Ailerons;
-  src: url('Ailerons-Typeface.ttf')
+  src: url('/static/fonts/Ailerons-Typeface.ttf')
 }
 
 @font-face {
   font-family: Avenir;
-  src: url('Avenir_Light.ttf')
+  src: url('/static/fonts/Avenir_Light.ttf')
 }
 
 * {
@@ -42,7 +42,7 @@ main {
 }
 
 h1 {
-  font-family: DinCondensed, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 16vw;
   text-transform: uppercase;
   text-align: center;
@@ -68,13 +68,13 @@ h3 {
 }
 
 h4 {
-  font-family: DinCondensed, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 7vw;
   color: #ffffff;
 }
 
 h5 {
-  font-family: DinCondensed, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 1.5em;
   color: #ffffff;
   margin-top: 1em;
@@ -84,7 +84,7 @@ p {
   font-family: Avenir, sans-serif;
   color: #3a4e55;
   font-size: 4vw;
-  font-weight: 600;
+  font-weight: 300;
 }
 
 ul {}
