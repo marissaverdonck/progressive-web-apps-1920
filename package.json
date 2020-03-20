@@ -4,7 +4,6 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-
     "prestart": "npm run build",
     "start": "node server.js",
     "predev": "npm run build",
@@ -12,18 +11,11 @@
     "prebuild": "rimraf ./static",
     "build": "npm-run-all build:*",
     "build:css": "node scripts/build-css.js",
-    "build:fonts": "node scripts/build-fonts.js",
     "build:js": "node scripts/build-js.js",
-    "build:manifest": "node scripts/build-manifest.js",
-    "build:serviceworker": "node scripts/build-serviceworker.js",
-    "build:images": "node scripts/build-img.js",
     "watch": "run-p watch:*",
     "watch:css": "chokidar 'public/css/*.css' --command 'npm run build:css'",
-    "watch:manifest": "chokidar 'public/manifest.json' --command 'npm run build:manifest'",
-    "watch:serviceworker": "chokidar 'public/service-worker.js' --command 'npm run build:serviceworker'",
-    "watch:images": "chokidar 'public/img/*' --command 'npm run build:images'",
+    "watch:js": "chokidar 'public/js/*.js' --command 'npm run build:js'",
     "test": "echo \"Error: no test specified\" && exit 1"
-
   },
   "repository": {
     "type": "git",
@@ -48,6 +40,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2"
   }
 }
