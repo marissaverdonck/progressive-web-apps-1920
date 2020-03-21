@@ -1,7 +1,6 @@
 ### 3 Vragen/ dingen waar je op moet letten/ waar ik tegen aan loop/ waar ik trots op ben:
 * Trots: De site werkt offline. Er is een manifest en service worker. Je kan de app instaleren.
-* Waar ik tegen aan loop: Ik wil nu de user feedback geven als hij/zij offline is. Ik kijk de presentatie van Declan van afgelopen dinsdag terug.
-* Waar ik tegen aan loop: Builden. Ik ben in de voorbeeld code van Declan aan het kijken hoe hij dat heeft aangepakt en ik lees het aanbevolen artikel: https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/
+* Waar ik tegen aan loop: Ik wil nu de user feedback geven als hij/zij offline is.Ik kijk de presentatie van Declan van afgelopen dinsdag terug. 
 
 ________________
 
