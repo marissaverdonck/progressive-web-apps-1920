@@ -1,5 +1,5 @@
 ### 3 Vragen/ dingen waar je op moet letten/ waar ik tegen aan loop/ waar ik trots op ben:
-* Trots: De site werkt offline. Er is een manifest en service worker. Je kan de app instaleren.
+* Trots: De site werkt offline. Er is een manifest en service worker. Je kan de app instaleren en er wordt gebruik gemaakt van tooling.
 * Waar ik tegen aan loop: Ik wil nu de user feedback geven als hij/zij offline is.Ik kijk de presentatie van Declan van afgelopen dinsdag terug. 
 * Vraag: Ik haal nu eerst de data op, daarna render ik pas index.js. Hoe kan ik ervoor zorgen dat er eerst html wordt geladen in de vorm van een skeleton?
 
