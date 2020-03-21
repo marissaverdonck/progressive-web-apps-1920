@@ -146,14 +146,18 @@ Website: https://skimap.org/pages/Developers#skiArea
 
 ## Features
 * Retrieving data from 2 API's
-* Server side rendering
-* Modules
-* Deployment
+* Installable version
+* Offline version
 
 ## WishList
-
+* Weather icons
 
 ## Learning goals
+* Server-side rendering
+* Deployment
+* Tooling
+* Installable version
+* Manifest/ service worker
 
 
 ## Credits
