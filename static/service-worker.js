@@ -1,8 +1,7 @@
 const cacheName = 'cache-v2';
 const precacheResources = [
   '/style.css',
-  '/',
-  'offline'
+  '/offline'
 ];
 
 self.addEventListener('install', event => {
@@ -41,37 +40,29 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   console.log('html get request', event.request.url)
-    // if (isCoreGetRequest(event.request)) {
-    // console.log('Core get request: ', event.request.url);
-    // event.respondWith(caches.match(event.request)
-    //   .then(cachedResponse => {
-    //     if (cachedResponse) {
-    //       return cachedResponse;
-    //     }
-    //     return fetch(event.request);
-    //   })
-    // );
 
+  if (isCoreGetRequest(event.request)) {
+    console.log('Core get request: ', event.request.url);
+    // cache only strategy
+    event.respondWith(
+      caches.open(cacheName)
+      .then(cache => cache.match(event.request.url))
 
-  //   event.respondWith(
-  //     caches.open(cacheName)
-  //     .then(cache => cache.match(event.request.url))
-  //   )
-
-  if (isHtmlGetRequest(event.request)) {
+    )
+  } else if (isHtmlGetRequest(event.request)) {
     console.log('html get request', event.request.url)
     event.respondWith(
+
       fetch(event.request)
       .catch(event => {
-        return new Response('Je bent offline')
+
+        return caches.open(cacheName)
+          .then(cache => cache.match('/offline'))
+
       })
     )
   }
-
-
 });
-
-
 
 /**
  * Checks if a request is a GET and HTML request
@@ -82,8 +73,6 @@ self.addEventListener('fetch', event => {
 function isHtmlGetRequest(request) {
   return request.method === 'GET' && (request.headers.get('accept') !== null && request.headers.get('accept').indexOf('text/html') > -1);
 }
-
-
 
 /**
  * Checks if a request is a core GET request

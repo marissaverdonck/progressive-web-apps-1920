@@ -4,17 +4,17 @@ body {
 
 @font-face {
   font-family: Roboto;
-  src: url('/static/fonts/Roboto-Black.ttf')
+  src: url('/fonts/Roboto-Black.ttf')
 }
 
 @font-face {
   font-family: Ailerons;
-  src: url('/static/fonts/Ailerons-Typeface.ttf')
+  src: url('/fonts/Ailerons-Typeface.ttf')
 }
 
 @font-face {
   font-family: Avenir;
-  src: url('/static/fonts/Avenir_Light.ttf')
+  src: url('/fonts/Avenir_Light.ttf')
 }
 
 * {
