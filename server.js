@@ -46,4 +46,16 @@ app.get('/detail/:name/:lat/:lon', (req, res) => {
     })
 })
 
+app.get('/offline', (req, res) => {
+  // dataHelper.getWeatherSkiLocations(skiLocations)
+  //   .then((weatherData) => {
+  //     console.log(skiLocations.skiLocations[0].georeferencing._lat)
+  res.render('offline')
+    // weatherData,
+    // skiLocations
+
+})
+
+// })
+
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

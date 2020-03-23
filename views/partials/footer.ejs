@@ -1,9 +1,10 @@
 <script>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => {
-          console.log('Service worker registered! 😎', reg);
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('Service worker registered! 😎', registration);
+          return registration.update()
         })
         .catch(err => {
           console.log('😥 Service worker registration failed: ', err);
@@ -16,14 +17,13 @@
   let deferredPrompt;
   window.addEventListener('beforeinstallprompt', event => {
 
-    // Prevent Chrome 67 and earlier from automatically showing the prompt
+    // Prevent from automatically showing the prompt
     event.preventDefault();
 
     // Stash the event so it can be triggered later.
     deferredPrompt = event;
 
     // Attach the install prompt to a user gesture
-
 
     document.querySelector('#installBtn').addEventListener('click', event => {
       console.log('Install button is clicked')

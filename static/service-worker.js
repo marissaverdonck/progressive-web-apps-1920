@@ -1,7 +1,8 @@
 const cacheName = 'cache-v2';
 const precacheResources = [
+  '/style.css',
   '/',
-  '/css/style.css'
+  'offline'
 ];
 
 self.addEventListener('install', event => {
@@ -9,50 +10,63 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(cacheName)
     .then(cache => {
-      return cache.addAll(precacheResources);
+      return cache.addAll(precacheResources)
+        .then(() =>
+          self.skipWaiting());
     })
   );
+
 });
+
+
+
 
 self.addEventListener('activate', event => {
   console.log('Service worker activate event!');
   // Delete old versions
-  var cacheWhitelist = ['cache-v2'];
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
+  // var cacheWhitelist = ['cache-v2'];
+  // event.waitUntil(
+  //   caches.keys().then(function(cacheNames) {
+  //     return Promise.all(
+  //       cacheNames.map(function(cacheName) {
+  //         if (cacheWhitelist.indexOf(cacheName) === -1) {
+  //           return caches.delete(cacheName);
+  //         }
+  //       })
+  //     );
+  //   })
+  // );
+  event.waitUntil(clients.claim())
 });
 
 self.addEventListener('fetch', event => {
-
-
-  // if (isCoreGetRequest(event.request)) {
-  console.log('Core get request: ', event.request.url);
-  event.respondWith(caches.match(event.request)
-    .then(cachedResponse => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request);
-    })
-  );
+  console.log('html get request', event.request.url)
+    // if (isCoreGetRequest(event.request)) {
+    // console.log('Core get request: ', event.request.url);
+    // event.respondWith(caches.match(event.request)
+    //   .then(cachedResponse => {
+    //     if (cachedResponse) {
+    //       return cachedResponse;
+    //     }
+    //     return fetch(event.request);
+    //   })
+    // );
 
 
   //   event.respondWith(
   //     caches.open(cacheName)
   //     .then(cache => cache.match(event.request.url))
   //   )
-  // } else if (isHtmlGetRequest(event.request)) {
-  //   console.log('html get request', event.request.url)
-  // }
+
+  if (isHtmlGetRequest(event.request)) {
+    console.log('html get request', event.request.url)
+    event.respondWith(
+      fetch(event.request)
+      .catch(event => {
+        return new Response('Je bent offline')
+      })
+    )
+  }
 
 
 });
