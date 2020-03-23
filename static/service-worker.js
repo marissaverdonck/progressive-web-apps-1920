@@ -1,68 +1,79 @@
-const cacheName = 'cache-v2';
+const cacheVersion = 'cache-v2';
 const precacheResources = [
   '/style.css',
+  '/img/mountain1.png',
   '/offline'
 ];
 
 self.addEventListener('install', event => {
   console.log('Service worker install event!');
   event.waitUntil(
-    caches.open(cacheName)
+    caches.open(cacheVersion)
     .then(cache => {
       return cache.addAll(precacheResources)
         .then(() =>
           self.skipWaiting());
     })
   );
-
 });
-
-
-
 
 self.addEventListener('activate', event => {
   console.log('Service worker activate event!');
-  // Delete old versions
-  // var cacheWhitelist = ['cache-v2'];
-  // event.waitUntil(
-  //   caches.keys().then(function(cacheNames) {
-  //     return Promise.all(
-  //       cacheNames.map(function(cacheName) {
-  //         if (cacheWhitelist.indexOf(cacheName) === -1) {
-  //           return caches.delete(cacheName);
-  //         }
-  //       })
-  //     );
-  //   })
-  // );
+
   event.waitUntil(clients.claim())
 });
 
 self.addEventListener('fetch', event => {
-  console.log('html get request', event.request.url)
 
+  // Cache only strategy
   if (isCoreGetRequest(event.request)) {
-    console.log('Core get request: ', event.request.url);
-    // cache only strategy
     event.respondWith(
-      caches.open(cacheName)
+      caches.open(cacheVersion)
       .then(cache => cache.match(event.request.url))
-
     )
+
+    // Fallback
   } else if (isHtmlGetRequest(event.request)) {
-    console.log('html get request', event.request.url)
     event.respondWith(
+      // Save :id-pages in Cache  
+      // If the :id page is in the cache, open it. Otherwise, catch.
 
-      fetch(event.request)
+      caches.open('html-cache')
+      .then(cache => cache.match(event.request.url))
+      .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
+
+
+
+
       .catch(event => {
-
-        return caches.open(cacheName)
+        return caches.open(cacheVersion)
           .then(cache => cache.match('/offline'))
-
       })
     )
   }
 });
+
+
+
+
+
+
+// Save :id-pages in Cache 
+function fetchAndCache(request, cacheName) {
+  return fetch(request)
+    .then(response => {
+      if (!response.ok) {
+        throw new TypeError('Bad response status');
+      }
+      // Use clone if response is already used
+      const clone = response.clone()
+      caches.open(cacheName).then((cache) => cache.put(request, clone))
+      return response
+    })
+}
+
+
+
 
 /**
  * Checks if a request is a GET and HTML request
