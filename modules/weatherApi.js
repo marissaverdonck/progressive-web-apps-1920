@@ -9,7 +9,7 @@ function getWeather(lat, lon, name) {
     // units is voor celsius en km
   const units = '?units=si'
 
-  const weatherData = fetch(`${url}${key2}/${lat},${lon}${units}`)
+  const weatherData = fetch(`${url}${key}/${lat},${lon}${units}`)
     .then((response) => {
       return response.json();
     })
