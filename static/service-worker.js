@@ -18,33 +18,22 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  console.log('Service worker activate event!');
-
   event.waitUntil(clients.claim())
 });
 
 self.addEventListener('fetch', event => {
-
   // Cache only strategy
   if (isCoreGetRequest(event.request)) {
     event.respondWith(
-      caches.open(cacheVersion)
-      .then(cache => cache.match(event.request.url))
-    )
-
-    // Fallback
+        caches.open(cacheVersion)
+        .then(cache => cache.match(event.request.url))
+      )
+      // Fallback
   } else if (isHtmlGetRequest(event.request)) {
     event.respondWith(
       // Save :id-pages in Cache  
       // If the :id page is in the cache, open it. Otherwise, catch.
-
-      caches.open('html-cache')
-      .then(cache => cache.match(event.request.url))
-      .then(response => response ? response : fetchAndCache(event.request, 'html-cache'))
-
-
-
-
+      fetch(event.request)
       .catch(event => {
         return caches.open(cacheVersion)
           .then(cache => cache.match('/offline'))
@@ -53,27 +42,19 @@ self.addEventListener('fetch', event => {
   }
 });
 
-
-
-
-
-
-// Save :id-pages in Cache 
-function fetchAndCache(request, cacheName) {
-  return fetch(request)
-    .then(response => {
-      if (!response.ok) {
-        throw new TypeError('Bad response status');
-      }
-      // Use clone if response is already used
-      const clone = response.clone()
-      caches.open(cacheName).then((cache) => cache.put(request, clone))
-      return response
-    })
-}
-
-
-
+// // Save :id-pages in Cache 
+// function fetchAndCache(request, cacheName) {
+//   return fetch(request)
+//     .then(response => {
+//       if (!response.ok) {
+//         throw new TypeError('Bad response status');
+//       }
+//       // Use clone if response is already used
+//       const clone = response.clone()
+//       caches.open(cacheName).then((cache) => cache.put(request, clone))
+//       return response
+//     })
+// }
 
 /**
  * Checks if a request is a GET and HTML request
