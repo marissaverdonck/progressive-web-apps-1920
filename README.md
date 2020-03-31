@@ -4,7 +4,7 @@
 
 ## Table of Contents
 * [Concept](#Concept)
-* [Live Desom](#Live-Demo)
+* [Live Deso](#Live-Demo)
 * [Research](#Research)
 * [Installation](#Installation)
 * [API's](#API's)
@@ -24,6 +24,18 @@ https://tranquil-dawn-22628.herokuapp.com/
 
 ## Research
 Find my research in the [Wiki](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki)
+
+* [1. Install NPM](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Install-npm-and-dependencies)
+ 
+* [2. Deploy with Heroku](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Deploying-with-Heroku)
+
+* [3. Manifest & Service worker](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Manifest-&-Service-worker)
+
+* [4. Install App](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Install-app)
+
+* [5. Building](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Building)
+
+* [6. Critical Rendering Path](https://github.com/marissaverdonck/progressive-web-apps-1920/wiki/Critical-Rendering-Path)
 
 ## Installation
 1. Open up your terminal
@@ -151,6 +163,10 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Manifest/ service worker
 
 ## Credits
+* [Declan Rek](https://github.com/decrek) Explanations, presentations
+* [Manouk Kappé ](https://github.com/ManoukK) Working together with server setup
+* [Maikel Sleebos](https://github.com/Senpaizuri) Bug resolving
+* [Robin Stut](https://github.com/RobinStut) Feedback
 
 ## Sources
 
