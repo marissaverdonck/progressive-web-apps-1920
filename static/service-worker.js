@@ -1,5 +1,6 @@
 const cacheVersion = 'cache-v3';
 const precacheResources = [
+  '/css/style.css',
   '/offline'
 ];
 
