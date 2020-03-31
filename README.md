@@ -1,10 +1,3 @@
-### 3 Vragen/ dingen waar je op moet letten/ waar ik tegen aan loop/ waar ik trots op ben:
-* Trots: De site werkt offline. Er is een manifest en service worker. Je kan de app instaleren en er wordt gebruik gemaakt van tooling.
-* Waar ik tegen aan loop: Ik wil nu de user feedback geven als hij/zij offline is.Ik kijk de presentatie van Declan van afgelopen dinsdag terug. 
-* Vraag: Ik haal nu eerst de data op, daarna render ik pas index.js. Hoe kan ik ervoor zorgen dat er eerst html wordt geladen in de vorm van een skeleton?
-
-________________
-
 # Snow Hunters - Progressive Web App
 
 <img width="742" alt="Schermafbeelding 2020-03-13 om 15 10 46" src="https://user-images.githubusercontent.com/43657951/76628366-e30dd880-653c-11ea-9fe7-101b5df99a66.png">
@@ -51,8 +44,6 @@ npm install
 ```
 node server.js
 ```
-
-
 
 
 ## API's 
@@ -159,12 +150,9 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Installable version
 * Manifest/ service worker
 
-
 ## Credits
 
-
 ## Sources
-
 
 ## License
 [MIT License](https://github.com/marissaverdonck/progressive-web-apps-1920/blob/master/license)
