@@ -7,7 +7,7 @@ return gulp.src([
     './public/css/*.css',
   ])
   .pipe(concat('style.css'))
-  // .pipe(cleanCSS())
+  .pipe(cleanCSS())
   .pipe(autoprefixer({
     cascade: false
   }))
