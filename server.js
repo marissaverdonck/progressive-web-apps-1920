@@ -7,14 +7,13 @@ const dataHelper = require('./modules/data-helper')
 const weatherApi = require('./modules/weatherApi')
 const skiLocations = require('./modules/skiLocationApi')
 
-// app.use((req, res, next) => {
-//   res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60)
-//   next()
-// })
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60)
+  next()
+})
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
 
 app.get('/', (req, res) => {
   dataHelper.getWeatherSkiLocations(skiLocations)
@@ -26,7 +25,6 @@ app.get('/', (req, res) => {
       })
     })
 })
-
 
 app.get('/detail/:name/:lat/:lon', (req, res) => {
   // Params:Amsterdam test
@@ -44,7 +42,6 @@ app.get('/detail/:name/:lat/:lon', (req, res) => {
         weatherDailyData,
         weatherData,
         name
-
       })
     })
 })
@@ -52,7 +49,5 @@ app.get('/detail/:name/:lat/:lon', (req, res) => {
 app.get('/offline', (req, res) => {
   res.render('offline')
 })
-
-// })
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
