@@ -175,9 +175,9 @@ Website: https://skimap.org/pages/Developers#skiArea
 * [Heroku](https://devcenter.heroku.com/)
 * [web.dev - Manifest](https://web.dev/add-manifest/)
 * [Codelabs - PWA](https://codelabs.developers.google.com/codelabs/pwa-offline-quickstart/index.html?index=..%2F..dev-pwa-training#2)
-* [CMD, critical rendering path](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2020-critical-rendering-path.pdf)
-* [Imagekit, Lazy loading](https://imagekit.io/blog/lazy-loading-images-complete-guide/)
-* [Jake Archibald, Best practices](https://jakearchibald.com/2016/caching-best-practices/)
+* [CMD - critical rendering path](https://github.com/cmda-minor-web/progressive-web-apps-1920/blob/master/course/cmd-2020-critical-rendering-path.pdf)
+* [Imagekit - Lazy loading](https://imagekit.io/blog/lazy-loading-images-complete-guide/)
+* [Jake Archibald - Best practices](https://jakearchibald.com/2016/caching-best-practices/)
 * [Declan Rek - Repository](https://github.com/decrek/progressive-web-apps-1920)
 
 ## License
