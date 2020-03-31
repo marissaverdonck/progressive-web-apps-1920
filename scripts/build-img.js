@@ -4,6 +4,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 
 return gulp.src([
-    './public/img/*.*'
+    './public/img/*.png'
   ])
   .pipe(gulp.dest('./static/img/'))

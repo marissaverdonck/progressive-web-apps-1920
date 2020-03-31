@@ -22,7 +22,7 @@
     "watch": "run-p watch:*",
     "watch:css": "chokidar \"public/css/*.css\" --command \"npm run build:css\"",
     "watch:js": "chokidar \"public/js/*.js\" --command \"npm run build:js\"",
-    "watch:images": "chokidar \"public/img/*\" --command \"npm run build:img\"",
+    "watch:images": "chokidar \"public/img/*\" --command \"npm run build:images\"",
     "watch:fonts": "chokidar \"public/css/fonts/*\" --command \"npm run build:fonts\"",
     "watch:manifest": "chokidar \"public/manifest.js\" --command \"npm run build:manifest\"",
     "watch:serviceworker": "chokidar \"public/service-worker.js\" --command \"npm run build:serviceworker\"",
