@@ -1,7 +1,7 @@
-const cacheVersion = 'cache-v2';
+const cacheVersion = 'cache-v3';
 const precacheResources = [
-  '/style.css',
-  '/img/mountain1.png',
+  '/css/style.css',
+  // '/img/mountain1.png',
   '/offline'
 ];
 
