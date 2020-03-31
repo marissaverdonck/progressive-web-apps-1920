@@ -6,14 +6,17 @@ const fetch = require('node-fetch');
 const dataHelper = require('./modules/data-helper')
 const weatherApi = require('./modules/weatherApi')
 const skiLocations = require('./modules/skiLocationApi')
+const revManifest = require('./static/rev-manifest')
 
-// app.use((req, res, next) => {
-//   res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60)
-//   next()
-// })
+app.use(/.*-[0-9a-f]{10}\..*/, (req, res, next) => {
+  res.setHeader('Cache-Control', 'max-age=365000000, immutable');
+  next();
+});
+
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
+app.set('etag', false)
 
 app.get('/', (req, res) => {
   dataHelper.getWeatherSkiLocations(skiLocations)
@@ -21,7 +24,8 @@ app.get('/', (req, res) => {
       console.log(skiLocations.skiLocations[0].georeferencing._lat)
       res.render('index', {
         weatherData,
-        skiLocations
+        skiLocations,
+        revManifest
       })
     })
 })
@@ -41,13 +45,16 @@ app.get('/detail/:name/:lat/:lon', (req, res) => {
       res.render('detail', {
         weatherDailyData,
         weatherData,
-        name
+        name,
+        revManifest
       })
     })
 })
 
 app.get('/offline', (req, res) => {
-  res.render('offline')
+  res.render('offline', {
+    revManifest
+  })
 })
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))

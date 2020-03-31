@@ -16,7 +16,6 @@ function getWeather(lat, lon, name) {
     .then((data) => {
       return data
     });
-
   return weatherData
 }
 

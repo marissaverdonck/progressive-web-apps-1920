@@ -2,6 +2,8 @@ const cacheVersion = 'cache-v3';
 const precacheResources = [
   '/css/style.css',
   '/img/mountain1.png',
+  '/fonts/Ailerons-Typeface.woff',
+  '/fonts/DINCondensed-Bold.woff',
   '/offline'
 ];
 
