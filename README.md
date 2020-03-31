@@ -4,7 +4,7 @@
 
 ## Table of Contents
 * [Concept](#Concept)
-* [Live Deso](#Live-Demo)
+* [Live Demo](#Live-Demo)
 * [Research](#Research)
 * [Installation](#Installation)
 * [API's](#API's)
