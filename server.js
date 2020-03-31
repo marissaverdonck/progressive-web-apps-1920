@@ -7,10 +7,10 @@ const dataHelper = require('./modules/data-helper')
 const weatherApi = require('./modules/weatherApi')
 const skiLocations = require('./modules/skiLocationApi')
 
-app.use((req, res, next) => {
-  res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60)
-  next()
-})
+// app.use((req, res, next) => {
+//   res.setHeader('Cache-Control', 'max-age=' + 365 * 24 * 60 * 60)
+//   next()
+// })
 app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
