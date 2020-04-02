@@ -153,9 +153,11 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Retrieving data from 2 API's
 * Installable version
 * Offline version
+* Fast loading
 
 ## WishList
 * Weather icons
+* Add your favorite ski area.
 
 ## Learning goals
 * Server-side rendering
@@ -163,6 +165,7 @@ Website: https://skimap.org/pages/Developers#skiArea
 * Tooling
 * Installable version
 * Manifest/ service worker
+* Critical rendering path
 
 ## Credits
 * [Declan Rek](https://github.com/decrek) Explanations, presentations
